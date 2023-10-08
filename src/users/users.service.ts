@@ -37,8 +37,8 @@ export class UsersService {
     return `This action updates a #${id} user`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  remove(id: string) {
+    return this.usersRepository.remove(id);
   }
 
   private async hashPassword(password: string): Promise<string> {
