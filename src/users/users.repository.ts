@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { User } from './entities/user.entity';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -34,11 +34,12 @@ export class UsersRepository {
     const userToDelete = users.find(user => user.id === id);
 
     if (!userToDelete) {
-        throw new NotFoundException(`User with ID ${id} not found`);
+        return false;
     }
 
     const updatedUsers = users.filter(user => user.id !== id);
     this.writeJsonDatabase(updatedUsers);
+    return true;
   }
 
   private readJsonDatabase(): User[] {

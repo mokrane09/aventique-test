@@ -1,4 +1,4 @@
-import { Injectable, UseInterceptors  } from '@nestjs/common';
+import { Injectable, NotFoundException  } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
@@ -38,7 +38,11 @@ export class UsersService {
   }
 
   remove(id: string) {
-    return this.usersRepository.remove(id);
+    if(!this.usersRepository.remove(id)) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    } else {
+      return true;
+    }
   }
 
   private async hashPassword(password: string): Promise<string> {
