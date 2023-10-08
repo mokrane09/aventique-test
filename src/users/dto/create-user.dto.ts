@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, Validate } from 'class-validator';
+import { IsEmail, IsNotEmpty } from 'class-validator';
 import { Transform, Expose, Exclude } from 'class-transformer';
 import { UniqueEmail } from '../validators/unique-email.validator';
 
