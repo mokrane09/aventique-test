@@ -15,8 +15,9 @@ export class UsersRepository {
         return user;
   }
 
-  findAll() {
-    return `This action returns all users`;
+  findAll(): User[] {
+    const users = this.readJsonDatabase();
+    return users;;
   }
 
   findOne(id: string): User {

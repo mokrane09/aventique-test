@@ -25,8 +25,8 @@ export class UsersService {
     return createdUser;
   }
 
-  findAll() {
-    return `This action returns all users`;
+  findAll(): User[] {
+    return this.usersRepository.findAll();
   }
 
   findOne(id: string): User {
