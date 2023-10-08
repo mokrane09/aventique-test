@@ -31,7 +31,6 @@ export class UsersRepository {
   }
 
   update(id: string, user: Partial<User>): User | null  {
-    console.log(user);
     const users = this.readJsonDatabase();
     const index = users.findIndex(user => user.id === id);
     if (index > -1) {
