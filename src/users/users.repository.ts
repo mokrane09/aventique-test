@@ -8,11 +8,11 @@ import * as dbConstants from './constants/db'
 export class UsersRepository {
     private readonly dbFilePath = path.join(__dirname, '../..', dbConstants.default.json_db_file_path);
 
-    create(user: User) {
-        const users = this.readJsonDatabase();
-        users.push(user);
-        this.writeJsonDatabase(users);
-        return user;
+  create(user: User) {
+    const users = this.readJsonDatabase();
+    users.push(user);
+    this.writeJsonDatabase(users);
+    return user;
   }
 
   findAll(): User[] {
