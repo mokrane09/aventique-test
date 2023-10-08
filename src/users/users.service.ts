@@ -30,7 +30,12 @@ export class UsersService {
   }
 
   findOne(id: string): User {
-    return this.usersRepository.findOne(id);
+    const user = this.usersRepository.findOne(id);
+    if(!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+
+    return user;
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
