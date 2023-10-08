@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException  } from '@nestjs/common';
+import { ConflictException, Injectable, NotFoundException  } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
@@ -12,7 +12,7 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto): Promise<User> {
     const hashedPassword = await this.hashPassword(createUserDto.password);
-    console.log(createUserDto)
+
     const user: User = new User(uuidv4(), 
       createUserDto.firstName, 
       createUserDto.lastName, 
@@ -38,13 +38,22 @@ export class UsersService {
     return user;
   }
 
-  update(id: string, updateUserDto: UpdateUserDto) {
-    const user = this.usersRepository.findOne(id);
+  async update(id: string, updateUserDto: UpdateUserDto) {
+    let user = this.usersRepository.findOne(id);
     if(!user) {
       throw new NotFoundException(`User with ID ${id} not found`);
     }
 
+    user = this.usersRepository.findOneByEmail(updateUserDto.email);
+    if(user && user.id !== id) {
+      throw new ConflictException(`Email ${updateUserDto.email} is already in use.`)
+    }
+    
+    updateUserDto.password = await this.hashPassword(updateUserDto.password);
 
+    const updatedUser: User = this.usersRepository.update(id, updateUserDto);
+
+    return updatedUser;
   }
 
   remove(id: string) {

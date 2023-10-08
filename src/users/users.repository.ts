@@ -1,4 +1,4 @@
-import { Injectable, ConflictException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { User } from './entities/user.entity';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -30,30 +30,17 @@ export class UsersRepository {
     return users.find(user => user.email === email) || null;
   }
 
-  update(id: string, updateUser: Partial<User>): User | null  {
+  update(id: string, user: Partial<User>): User | null  {
+    console.log(user);
     const users = this.readJsonDatabase();
-
-    const userIndex = users.findIndex(user => user.id === id);
-    if (userIndex === -1) {
-        return null;
+    const index = users.findIndex(user => user.id === id);
+    if (index > -1) {
+        users[index] = { ...users[index], ...user };
+        this.writeJsonDatabase(users);
+        return users[index];
     }
 
-    const existingUser = users[userIndex];
-
-    // if (updateUser.age !== undefined) {
-    //     const currentYear = new Date().getFullYear();
-    //     const birthYear = currentYear - updateUser.age;
-    //     const existingBirthDate = new Date(existingUser.birthDate);
-    //     existingBirthDate.setFullYear(birthYear);
-    //     updateUser.birthDate = existingBirthDate.toISOString();
-    // }
-
-    // Update the user
-    const updatedUser = { ...existingUser, ...updateUser };
-    users[userIndex] = updatedUser;
-    this.writeJsonDatabase(users);
-
-    return updatedUser;
+    return null;
   }
 
   remove(id: string) {
