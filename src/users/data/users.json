@@ -1,53 +1,25 @@
 [
   {
-    "id": "63438c9a-b75c-4931-96ba-7bcfc534093a",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@email.com",
-    "password": "$2b$10$SeOruOvJ65WjyRfScqTSnuG6GcoP9LuZqFa3lMINwvrmAjQuGpAyG"
-  },
-  {
-    "id": "78744f0b-c3d7-430c-80b3-1a6aed783f76",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@email.com",
-    "password": "$2b$10$U/AacAE6K1fTFoERas4Nc.nzs.AOEg4Q0Ojgu/rNrKiCxYTjnDWW6"
-  },
-  {
-    "id": "57455e2e-6249-41e3-8379-deea6dc77470",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@email.com",
-    "password": "$2b$10$PlyVO09K1gOCSDBZRK22m.HCo9asHBzhxYmTjAZa993zg8.DIQ/4K"
-  },
-  {
-    "id": "e157454e-a078-4734-9436-b1e84efdcfe3",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@email.com",
-    "password": "$2b$10$qOcLmk23zRBS6JmRsRHkGOLmj2EwnodU9Ckqw8AnkOYuS1729cIS6"
-  },
-  {
-    "id": "b3937717-4142-44ad-8719-6a9e998cfc8b",
-    "firstName": "John",
-    "lastName": "Doe",
-    "email": "email@email.com",
-    "password": "$2b$10$yLVnKnAWrHs1l.mxndZekuSI0hdMBre2WsqhTEEVA6ZM0Rie72C/C"
-  },
-  {
-    "id": "3d5e8a93-bbf9-42b1-95fe-deb758dca907",
+    "id": "3d15ee69-e49a-4629-ba44-f17300400d7f",
     "firstName": "John",
     "lastName": "Doe",
     "birthDate": "1990-12-31",
     "email": "email@email.com",
-    "password": "$2b$10$8k4w7cMrDfLVLffQWXQ8RuVFBbLh.cCpqRIHPOzUGyyapmKstJX6O"
+    "password": "$2b$10$rwtoPq7BW0fI3yp6pel68OZ7UQb/uMtsDk3lYfs3vblUoldUx9Lfe"
   },
   {
-    "id": "74910745-4933-432c-995a-3bfe679009f0",
+    "id": "0c8d8aa5-0f96-4c4b-b689-837fd797e039",
     "firstName": "John",
     "lastName": "Doe",
     "birthDate": "1990-12-31",
     "email": "email@email.com",
-    "password": "$2b$10$85RMijBkA6zzwaPpb2NbU.pQW4RqPS8Hw127rCNxjMrLQKbVz.rDi"
+    "password": "$2b$10$82TxAKr5/w0WRduP/rotdODxXMTILLwt2y5M8ZUbe2bW0pu2bTqgu"
+  },
+  {
+    "id": "347782d2-e221-41a3-a405-44ae5e90a116",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "email@email.com",
+    "password": "$2b$10$smGvKqz/na7gLWiSuq2cauYPImKNIcQZCWC8Ps32LDY50i0ac/BZC"
   }
 ]

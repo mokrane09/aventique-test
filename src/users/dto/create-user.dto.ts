@@ -1,9 +1,11 @@
-import { IsEmail, IsNotEmpty } from 'class-validator';
+import { IsEmail, IsNotEmpty, Validate } from 'class-validator';
 import { Transform, Expose, Exclude } from 'class-transformer';
+import { UniqueEmail } from '../validators/unique-email.validator';
 
 export class CreateUserDto {
     @IsNotEmpty()
     @IsEmail()
+    @UniqueEmail()
     email: string;
 
     @IsNotEmpty()

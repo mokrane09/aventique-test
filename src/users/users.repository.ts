@@ -78,7 +78,4 @@ export class UsersRepository {
       const content = JSON.stringify(users, null, 2);
       fs.writeFileSync(this.dbFilePath, content, 'utf-8');
   }
-
-
-
 }
