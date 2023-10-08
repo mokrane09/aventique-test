@@ -12,11 +12,11 @@ export class UsersService {
 
   async create(createUserDto: CreateUserDto): Promise<User> {
     const hashedPassword = await this.hashPassword(createUserDto.password);
-    
+    console.log(createUserDto)
     const user: User = new User(uuidv4(), 
       createUserDto.firstName, 
       createUserDto.lastName, 
-      createUserDto.birthDay, 
+      createUserDto.birthDate, 
       createUserDto.email, 
       hashedPassword);
 
@@ -38,8 +38,13 @@ export class UsersService {
     return user;
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  update(id: string, updateUserDto: UpdateUserDto) {
+    const user = this.usersRepository.findOne(id);
+    if(!user) {
+      throw new NotFoundException(`User with ID ${id} not found`);
+    }
+
+
   }
 
   remove(id: string) {

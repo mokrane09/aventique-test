@@ -1,98 +1,53 @@
 [
   {
-    "id": 1,
+    "id": "63438c9a-b75c-4931-96ba-7bcfc534093a",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
     "email": "email@email.com",
-    "password": "$2b$10$PL9kdV8548XbGwb7P5NwDekW3RmQ8UG1rguTqLYPXyRvm0hNK1VO6"
+    "password": "$2b$10$SeOruOvJ65WjyRfScqTSnuG6GcoP9LuZqFa3lMINwvrmAjQuGpAyG"
   },
   {
-    "id": 1,
+    "id": "78744f0b-c3d7-430c-80b3-1a6aed783f76",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
     "email": "email@email.com",
-    "password": "$2b$10$yz30Y3w3.t5Zl3d5hV8cgOUmv8vjgPw9NVZpN2hg57ShnZIxSM6E."
+    "password": "$2b$10$U/AacAE6K1fTFoERas4Nc.nzs.AOEg4Q0Ojgu/rNrKiCxYTjnDWW6"
   },
   {
-    "id": "568ab3de-7e30-44d6-ae40-dcaf54a6b769",
+    "id": "57455e2e-6249-41e3-8379-deea6dc77470",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
     "email": "email@email.com",
-    "password": "$2b$10$HzXwCdJSB6bQAweE8WbHQ.93KUQM2yi4n2CjMMy3oRuOlo4g7JI92"
+    "password": "$2b$10$PlyVO09K1gOCSDBZRK22m.HCo9asHBzhxYmTjAZa993zg8.DIQ/4K"
   },
   {
-    "id": "10838846-e484-4217-a167-5c09c3b7be57",
+    "id": "e157454e-a078-4734-9436-b1e84efdcfe3",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
     "email": "email@email.com",
-    "password": "$2b$10$xy8tAW741aGhhkhPkx/anu6jaJf0e6r/Wudvmsr6sraq2bKR5qOwa"
+    "password": "$2b$10$qOcLmk23zRBS6JmRsRHkGOLmj2EwnodU9Ckqw8AnkOYuS1729cIS6"
   },
   {
-    "id": "1db90b8b-8cc0-4be1-906b-a2ae2b563da0",
+    "id": "b3937717-4142-44ad-8719-6a9e998cfc8b",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
     "email": "email@email.com",
-    "password": "$2b$10$Fvn/9trrjuQgDf2lkTXwJOZsGEF31zR8CEiZj1D1100f9PYPoB1ui"
+    "password": "$2b$10$yLVnKnAWrHs1l.mxndZekuSI0hdMBre2WsqhTEEVA6ZM0Rie72C/C"
   },
   {
-    "id": "85098ea0-34ea-4654-8a1e-edfc7d35f0af",
+    "id": "3d5e8a93-bbf9-42b1-95fe-deb758dca907",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
+    "birthDate": "1990-12-31",
     "email": "email@email.com",
-    "password": "$2b$10$IAsYxqqNI8uh9BgWeP0bVePK/yXTz0GpPSRlBWiglKgEtliWMyPvO"
+    "password": "$2b$10$8k4w7cMrDfLVLffQWXQ8RuVFBbLh.cCpqRIHPOzUGyyapmKstJX6O"
   },
   {
-    "id": "6fc639ff-2e5b-42a9-92e2-d31c87ac2219",
+    "id": "74910745-4933-432c-995a-3bfe679009f0",
     "firstName": "John",
     "lastName": "Doe",
-    "birthDay": "10-10-1990",
+    "birthDate": "1990-12-31",
     "email": "email@email.com",
-    "password": "$2b$10$8koBfP27PvW7QYnxDxdBRuhTtrO769vYC1qgpXPG2LfuwF4viQus2"
-  },
-  {
-    "id": "c8835f79-f4c3-427d-ab83-eb0c7b495a5b",
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthDay": "10-10-1990",
-    "email": "email@email.com",
-    "password": "$2b$10$vOoTcANCi550N2RoeeR1UuyFxEMb2ZR8IpA7Lul.TuICA3MGEdxS6"
-  },
-  {
-    "id": "00e1045b-5263-4c5b-b689-b2e5caf1ac47",
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthDay": "10-10-1990",
-    "email": "email@email.com",
-    "password": "$2b$10$W3wZy9hHvCHzwPx.kfWPqeYibovQYJuW1g/eHmS4aEaF4jdX0HYOK"
-  },
-  {
-    "id": "a7859e6b-5fa8-4ae2-8101-19f4ed3be2dd",
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthDay": "10-10-1990",
-    "email": "email@email.com",
-    "password": "$2b$10$GPoon.m/dZIpvF5gSjYyoeJFJ4cKlbnZd3GCTfHk22DRLLydmR2C2"
-  },
-  {
-    "id": "c1425016-fcea-4f31-a549-6dad6fbf85f6",
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthDay": "10-10-1990",
-    "email": "email@email.com",
-    "password": "$2b$10$G/W3Hu0ihzB10ft7y58n3elBc7OY4UK26Un.5iGupVdkvXWaNDE5W"
-  },
-  {
-    "id": "873bc29a-da5b-4178-a07f-f750fc73b281",
-    "firstName": "John",
-    "lastName": "Doe",
-    "birthDay": "10-10-1990",
-    "email": "email@email.com",
-    "password": "$2b$10$Gh4oYv1tspNVV8fms5ocWe9FSmXRiZiyIcq5huCn.hO.XqfPJhkV6"
+    "password": "$2b$10$85RMijBkA6zzwaPpb2NbU.pQW4RqPS8Hw127rCNxjMrLQKbVz.rDi"
   }
 ]

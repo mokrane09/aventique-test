@@ -5,7 +5,7 @@ export class UserDTO {
     constructor(user: User) {
         this.id = user.id;
         this.fullName = `${user.firstName} ${user.lastName}`;
-        this.age = new Date().getFullYear() - new Date(user.birthDay).getFullYear();
+        this.age = new Date().getFullYear() - new Date(user.birthDate).getFullYear();
         this.email = user.email;
     }
 
