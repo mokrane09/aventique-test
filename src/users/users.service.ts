@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, UseInterceptors  } from '@nestjs/common';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from './entities/user.entity';
@@ -10,7 +10,7 @@ import { v4 as uuidv4 } from 'uuid';
 export class UsersService {
   constructor(private readonly usersRepository: UsersRepository) {}
 
-  async create(createUserDto: CreateUserDto) {
+  async create(createUserDto: CreateUserDto): Promise<User> {
     const hashedPassword = await this.hashPassword(createUserDto.password);
     
     const user: User = new User(uuidv4(), 
@@ -20,9 +20,9 @@ export class UsersService {
       createUserDto.email, 
       hashedPassword);
 
-      this.usersRepository.create(user);
+      const createdUser: User = this.usersRepository.create(user);
 
-    return user;
+    return createdUser;
   }
 
   findAll() {
